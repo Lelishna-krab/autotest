@@ -31,6 +31,6 @@ bin/
 
 /.idea/
 /src/
-.idea
+.idea/
 .gitignore
 autotest.iml
