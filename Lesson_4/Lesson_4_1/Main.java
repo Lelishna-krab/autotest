@@ -1,4 +1,4 @@
-package Lesson_3_2_1;
+package Lesson_4_1;
 
 
 public class Main {
