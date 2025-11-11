@@ -1,6 +1,27 @@
 import java.util.Scanner;
 
 public class ArithmeticOperations {
+
+    // Методы для арифметических операций
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static int subtract(int a, int b) {
+        return a - b;
+    }
+
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public static double divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Деление на ноль!");
+        }
+        return (double) a / b;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -19,25 +40,29 @@ public class ArithmeticOperations {
 
         int operation = scanner.nextInt();
 
-        switch (operation) {
-            case 1:
-                System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
-                break;
-            case 2:
-                System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
-                break;
-            case 3:
-                System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
-                break;
-            case 4:
-                if (num2 != 0) {
-                    System.out.println(num1 + " / " + num2 + " = " + ((double)num1 / num2));
-                } else {
-                    System.out.println("Ошибка: деление на ноль!");
-                }
-                break;
-            default:
-                System.out.println("Неверная операция!");
+        try {
+            switch (operation) {
+                case 1:
+                    int sum = add(num1, num2);
+                    System.out.println(num1 + " + " + num2 + " = " + sum);
+                    break;
+                case 2:
+                    int difference = subtract(num1, num2);
+                    System.out.println(num1 + " - " + num2 + " = " + difference);
+                    break;
+                case 3:
+                    int product = multiply(num1, num2);
+                    System.out.println(num1 + " * " + num2 + " = " + product);
+                    break;
+                case 4:
+                    double quotient = divide(num1, num2);
+                    System.out.println(num1 + " / " + num2 + " = " + quotient);
+                    break;
+                default:
+                    System.out.println("Неверная операция!");
+            }
+        } catch (ArithmeticException e) {
+            System.out.println("Ошибка: " + e.getMessage());
         }
 
         scanner.close();
