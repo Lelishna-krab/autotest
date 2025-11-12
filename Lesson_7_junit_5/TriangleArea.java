@@ -17,7 +17,7 @@ public class TriangleArea {
         scanner.close();
     }
 
-    // Вспомогательный метод для ввода и вывода
+
     private static void calculateAndPrintAreaByBaseAndHeight(Scanner scanner) {
         System.out.print("Введите длину основания: ");
         double base = scanner.nextDouble();
