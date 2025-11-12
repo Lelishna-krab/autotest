@@ -8,6 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="junit.jupiter" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="testng-7.7.1" level="project" />
+    <orderEntry type="library" exported="" name="testng-7.7.1" level="project" />
   </component>
 </module>
