@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ArithmeticOperations {
 
-    // Методы для арифметических операций
+
     public static int add(int a, int b) {
         return a + b;
     }
